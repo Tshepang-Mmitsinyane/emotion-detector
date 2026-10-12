@@ -46,7 +46,6 @@ model = load_model()
 
 @st.cache_resource
 def load_face_detector():
-<<<<<<< HEAD
     cascade_path = os.path.join(cv2.data.haarcascades + "haarcascade/haarcascade_frontalface_default.xml")
     detector = cv2.CascadeClassifier(cascade_path)
     
@@ -55,10 +54,6 @@ def load_face_detector():
             f"Failed to load face detector from: {cascade_path}"
         )
     
-=======
-    cascade_path = cv2.data.haarcascades + "haarcascade/haarcascade_frontalface_default.xml"
-    detector = cv2.CascadeClassifier(cascade_path)
->>>>>>> 4773c015804fa75bca33dc7d850f0587f930a946
     return detector
     
 face_detector = load_face_detector()
