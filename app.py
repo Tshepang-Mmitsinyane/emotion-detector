@@ -45,11 +45,8 @@ model = load_model()
 
 @st.cache_resource
 def load_face_detector():
-
-    detector = cv2.CascadeClassifier(
-        "haarcascade/haarcascade_frontalface_default.xml"
-    )
-
+    cascade_path = cv2.data.haarcascades + "haarcascade/haarcascade_frontalface_default.xml"
+    detector = cv2.CascadeClassifier(cascade_path)
     return detector
 
 
